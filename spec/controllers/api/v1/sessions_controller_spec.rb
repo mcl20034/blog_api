@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe SessionsController type: :controller do
+RSpec.describe "Api::V1::SessionsController", type: :request do
   describe "Sessions" do
     let(:user) {User.create!(name: 'zhang3', email: 'kuban@kuban.io', password: 'kuban.io')}
 
@@ -16,6 +16,7 @@ RSpec.describe SessionsController type: :controller do
       }
       res = JSON.parse(response.body)
       expect(response.status).to eq(200)
+      expect(res['name']).to eq(user.name) 
     end
   end
   
