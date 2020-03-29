@@ -74,10 +74,17 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.1)
+    coderay (1.1.2)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
+    database_cleaner (1.8.3)
+    database_cleaner-active_record (1.8.0)
+      activerecord
+      database_cleaner (~> 1.8.0)
     diff-lcs (1.3)
     erubi (1.9.0)
+    factory_bot (5.1.2)
+      activesupport (>= 4.2.0)
     ffi (1.12.2)
     ffi (1.12.2-java)
     ffi (1.12.2-x64-mingw32)
@@ -135,6 +142,13 @@ GEM
     pg (1.2.3)
     pg (1.2.3-x64-mingw32)
     pg (1.2.3-x86-mingw32)
+    pry (0.13.0)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry (0.13.0-java)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+      spoon (~> 0.0)
     puma (3.12.4)
     puma (3.12.4-java)
     pundit (2.1.0)
@@ -196,6 +210,8 @@ GEM
       rspec-support (~> 3.9)
     rspec-support (3.9.2)
     ruby_dep (1.5.0)
+    spoon (0.0.6)
+      ffi
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -234,12 +250,15 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   byebug
+  database_cleaner-active_record
+  factory_bot
   faker!
   jbuilder (~> 2.5)
   jwt
   kaminari
   listen (>= 3.0.5, < 3.2)
   pg
+  pry
   puma (~> 3.11)
   pundit
   rack-cors

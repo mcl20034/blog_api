@@ -1,5 +1,6 @@
 class Api::V1::ArticlesController < Api::V1::BaseController
   def index
+    params[:page] ||= 1
     @articles = Article.all.page(params[:page])
     set_pagination_header(@articles)
     render 'index'

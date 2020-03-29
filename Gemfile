@@ -40,6 +40,9 @@ gem 'swagger-blocks'
 # A ruby implementation of the RFC 7519 OAuth JSON Web Token (JWT) standard.
 gem 'jwt'
 
+gem 'factory_bot'
+gem 'pry'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -47,6 +50,10 @@ group :development, :test do
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+end
+
+group :test do
+  gem 'database_cleaner-active_record'
 end
 
 group :development do
