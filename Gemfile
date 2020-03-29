@@ -47,7 +47,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.6'
 end
 
 group :test do
