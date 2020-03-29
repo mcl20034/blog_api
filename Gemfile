@@ -1,5 +1,5 @@
-# source 'https://rubygems.org'
-source 'http://gems.ruby-china.com'
+source 'https://rubygems.org'
+# source 'http://gems.ruby-china.com'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -47,7 +47,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 1.3.6'
+  gem 'sqlite3'
 end
 
 group :test do
