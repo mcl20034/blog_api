@@ -1,7 +1,9 @@
-RSpec.describe Api::V1::ArticlesController type: :request do
-  context "CRUD Articles" do
+require 'rails_helper'
+
+RSpec.describe Api::V1::ArticlesController type: :controller do
+  describe "CRUD Articles" do
     it "get articles" do
-      post "/articles", {
+      post "/api/v1/articles", {
         params: {
           title: 'title',
           content: 'content'
@@ -11,11 +13,10 @@ RSpec.describe Api::V1::ArticlesController type: :request do
         }
       }
       res = JSON.parse(response.body)
-      pp res
       expect(response.status).to eq(200)
     end
     it "create Article" do
-      post "/articles", {
+      post "/api/v1/articles", {
         params: {
           title: 'title',
           content: 'content'
@@ -25,7 +26,6 @@ RSpec.describe Api::V1::ArticlesController type: :request do
         }
       }
       res = JSON.parse(response.body)
-      pp res
       expect(response.status).to eq(200)
     end
   end

@@ -1,4 +1,4 @@
-class Api::V1::ArticlesController < ApplicationController
+class Api::V1::ArticlesController < Api::V1::BaseController
   def index
     @articles = Article.all.page(params[:page])
     set_pagination_header(@articles)

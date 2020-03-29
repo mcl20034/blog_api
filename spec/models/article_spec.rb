@@ -16,7 +16,6 @@ RSpec.describe Article, type: :model do
   context "CRUD Article" do
     it "create Article" do
       article = Article.create(title: 'title', content: 'content')
-      pp article
       expect(article.title).to eq('title') 
     end
   end
