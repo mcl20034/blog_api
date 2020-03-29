@@ -272,8 +272,5 @@ DEPENDENCIES
   swagger-blocks
   tzinfo-data
 
-RUBY VERSION
-   ruby 2.5.3p105
-
 BUNDLED WITH
    2.1.4
