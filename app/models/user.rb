@@ -30,7 +30,8 @@ class User < ApplicationRecord
   end
 
   has_secure_password
-
+  validates :email, uniqueness: true
+  
   def token
     Token.encode(user_id: self.id)
   end

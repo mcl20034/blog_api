@@ -1,3 +1,4 @@
 zh-CN:
   errors:
     signin_failed: '错误的邮箱或密码'
+    signup_failed_has_email: '邮箱已经注册'

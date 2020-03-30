@@ -32,3 +32,4 @@
 en:
   errors:
     signin_failed: 'error email or password'
+    signup_failed_has_email: 'email has signup'
